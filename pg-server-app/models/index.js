@@ -14,12 +14,13 @@ const pool = new Pool(connectionConfig);
 
 pool.connect(err => {
   if (!err) {
-    console.log('DB connection success!');
+    console.log('DB coonnection success!');
   }
-}
-);
+});
 
 process.on('beforeExit', () => pool.end());
 
+User.pool = pool;
+Phone.pool = pool;
 
 module.exports = { User, Phone };

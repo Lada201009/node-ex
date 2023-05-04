@@ -1,11 +1,12 @@
-module.exports.createUser = async (req,res,next) => {
+const { User } = require('../models')
+module.exports.createUser = async (req, res, next) => {
   const { body } = req;
 
-  try{
+  try {
     const createdUser = await User.create(body);
     res.status(201).send(createdUser);
-  } catch(err) {
-    next(e);
+  } catch (err) {
+    next(err);
   }
 };
 

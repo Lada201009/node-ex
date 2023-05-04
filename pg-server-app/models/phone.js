@@ -1,9 +1,9 @@
-class Phone{
-  static create(){}
-  static getAll(){}
-  static getById(){}
-  static updateById(){}
-  static deleteByID(){}
+class Phone {
+  static create () {}
+  static getAll () {}
+  static getById () {}
+  static updateById () {}
+  static deleteById () {}
 }
 
-module.export= Phone;
+module.exports = Phone;
