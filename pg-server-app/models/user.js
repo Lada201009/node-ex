@@ -1,5 +1,5 @@
 class User{
-  static create({firsName, lastName, email, tel}){
+  static async create({firsName, lastName, email, tel}){
     //прописати  sql  - запит 
     //поверне те що створено ^
     const insertQuery = `
@@ -9,8 +9,14 @@ class User{
     `;
 
     //виконати запит
-    //повернути результат або помилку
-  }
+    try{createdUser = await User.pool.query(insertQuery);
+      console.log('createdUSER :>>', createdUser.rows[0])
+      return createdUser;
+    }catch (err) {
+//повернути результат або помилку
+     console.log('err :>>, err');
+    }}
+    
   static getAll(){}
   static getById(){}
   static updateById(){}
