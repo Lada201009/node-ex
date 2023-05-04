@@ -1,6 +1,8 @@
 const http = require('http');
 const app = require('./app.js');
 
+require('./models');
+
 const PORT = process.env.PORT || 5000;
 
 const httpServer = http.createServer(app);
