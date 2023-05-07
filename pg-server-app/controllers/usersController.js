@@ -10,7 +10,6 @@ module.exports.createUser = async (req, res, next) => {
     next(err);
   }
 };
-
 module.exports.getUsers = async (req, res, next) => {
   const { pagination } = req;
 

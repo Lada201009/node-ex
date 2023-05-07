@@ -19,9 +19,4 @@ usersRouter
 
 module.exports = usersRouter;
 
-//-------------------------------------------
-// onclick <-> HTTPMethod+route
-// const listener = () => {};
-// button.addEventListener('click',listener)
-// button.addEventListener('click',listener1)
-// button.addEventListener('click',listener2)
+

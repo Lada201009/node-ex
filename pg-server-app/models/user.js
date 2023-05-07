@@ -1,7 +1,6 @@
 class User {
   static async create ({ firstName, lastName, email, tel }) {
     // прописати sql-запит
-
     const insertQuery = `
       INSERT INTO users (first_name, last_name, email, tel)
       VALUES ('${firstName}', '${lastName}', '${email}', '${tel}')
