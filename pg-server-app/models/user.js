@@ -1,4 +1,3 @@
-
 class User {
   static async create ({ firstName, lastName, email, tel }) {
     // прописати sql-запит

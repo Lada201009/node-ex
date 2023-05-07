@@ -7,8 +7,8 @@ const usersRouter = Router();
 
 usersRouter
   .route('/')
-  .post(usersController.createUser)
-  .get((req,res)=> res.send('ok'));
+  .post(validate.validateUserOnCreate, usersController.createUser)
+  .get(paginate.paginateUser, usersController.getUsers);
 
 // /api/users/1
 usersRouter
