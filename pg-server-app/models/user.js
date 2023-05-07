@@ -16,12 +16,11 @@ class User {
       throw new Error(err.detail);
     }
   }
-  static async getAll ({ limit, offset }) {
+  static async getAll () {
     const selectQuery = `
      SELECT *
      FROM users
      ORDER BY id
-     LIMIT ${limit} OFFSET ${offset};
    `;
     try {
       const foundUsers = await User.pool.query(selectQuery);
